@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>视频截图工具 - 测试页面</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f5;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .video-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      background: #000;
+    }
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .video-info {
+      padding: 20px;
+    }
+
+    .video-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .video-desc {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .instructions {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .instructions h2 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    .instructions ol {
+      padding-left: 20px;
+      line-height: 2;
+      color: #555;
+    }
+
+    .instructions li {
+      margin-bottom: 8px;
+    }
+
+    .highlight {
+      background: #fff3cd;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎬 视频截图工具测试页面</h1>
+    <p class="subtitle">安装扩展后，点击下方工具栏的扩展图标即可测试截图功能</p>
+
+    <div class="video-grid">
+      <!-- 视频 1: Big Buck Bunny -->
+      <div class="video-card">
+        <div class="video-wrapper">
+          <video controls poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217">
+            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+            您的浏览器不支持视频标签。
+          </video>
+        </div>
+        <div class="video-info">
+          <div class="badge">示例视频 1</div>
+          <h3 class="video-title">Big Buck Bunny</h3>
+          <p class="video-desc">这是一个开源的动画短片，可用于测试视频截图功能。</p>
+        </div>
+      </div>
+
+      <!-- 视频 2: Elephants Dream -->
+      <div class="video-card">
+        <div class="video-wrapper">
+          <video controls poster="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Elephants_Dream_cover.jpg/1200px-Elephants_Dream_cover.jpg">
+            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
+            您的浏览器不支持视频标签。
+          </video>
+        </div>
+        <div class="video-info">
+          <div class="badge">示例视频 2</div>
+          <h3 class="video-title">Elephants Dream</h3>
+          <p class="video-desc">世界上第一部开源电影，由 Blender 基金会制作。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <h2>📖 测试步骤</h2>
+      <ol>
+        <li>确保已按照 README.md 中的说明安装并启用扩展</li>
+        <li>点击浏览器工具栏上的 <span class="highlight">🎬 视频截图工具</span> 图标</li>
+        <li>在弹出的窗口中点击 <span class="highlight">"扫描视频播放器"</span> 按钮</li>
+        <li>选择要截图的视频播放器（会显示 2 个选项）</li>
+        <li>截图将自动保存到您的下载文件夹</li>
+        <li>可在扩展的「设置」中配置自定义保存路径</li>
+      </ol>
+    </div>
+  </div>
+
+  <script>
+    // 添加一些交互提示
+    document.querySelectorAll('video').forEach(video => {
+      video.addEventListener('play', function() {
+        console.log('[测试页面] 视频开始播放:', this.closest('.video-card').querySelector('.video-title').textContent);
+      });
+    });
+  </script>
+</body>
+</html>

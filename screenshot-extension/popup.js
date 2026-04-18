@@ -11,6 +11,7 @@ function switchLanguage(lang) {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.dataset.i18n;
         const message = chrome.i18n.getMessage(key);
+        console.log('i18n key:', key, 'message:', message);
         if (message) {
             element.textContent = message;
         }
@@ -25,29 +26,33 @@ function switchLanguage(lang) {
     try {
         chrome.storage.local.set({ language: lang });
     } catch (e) {
-        console.log('Storage not available');
+        console.log('Storage not available:', e);
     }
 }
 
 function initLanguage() {
     try {
         chrome.storage.local.get('language', function(result) {
+            let lang;
             if (result.language) {
-                switchLanguage(result.language);
+                lang = result.language;
             } else {
                 const browserLang = chrome.i18n.getUILanguage();
+                console.log('Browser language:', browserLang);
                 if (browserLang.startsWith('zh')) {
-                    switchLanguage('zh');
+                    lang = 'zh';
                 } else {
-                    switchLanguage('en');
+                    lang = 'en';
                 }
             }
+            switchLanguage(lang);
         });
     } catch (e) {
-        console.log('Storage not available');
+        console.log('Storage not available:', e);
     }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('Popup loaded');
     initLanguage();
 });

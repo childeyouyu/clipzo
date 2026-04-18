@@ -54,7 +54,17 @@ function initLanguage() {
     }
 }
 
+function initEventListeners() {
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const lang = this.dataset.lang;
+            switchLanguage(lang);
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Popup loaded');
+    initEventListeners();
     initLanguage();
 });

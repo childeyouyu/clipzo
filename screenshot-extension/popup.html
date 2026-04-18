@@ -34,6 +34,33 @@
             color: #666;
         }
         
+        .language-switch {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .lang-btn {
+            padding: 6px 16px;
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 20px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .lang-btn:hover {
+            background: #f0f0f0;
+        }
+        
+        .lang-btn.active {
+            background: #ff6600;
+            color: white;
+            border-color: #ff6600;
+        }
+        
         .feature-list {
             background: white;
             border-radius: 8px;
@@ -112,8 +139,13 @@
 </head>
 <body>
     <div class="header">
-        <h1>📸 视频截图工具</h1>
-        <p>快速捕获网页视频精彩画面</p>
+        <h1 data-i18n="title">📸 视频截图工具</h1>
+        <p data-i18n="subtitle">快速捕获网页视频精彩画面</p>
+    </div>
+    
+    <div class="language-switch">
+        <button class="lang-btn active" data-lang="zh" onclick="switchLanguage('zh')">中文</button>
+        <button class="lang-btn" data-lang="en" onclick="switchLanguage('en')">English</button>
     </div>
     
     <div class="feature-list">
@@ -124,8 +156,8 @@
                 </svg>
             </div>
             <div class="feature-text">
-                <h3>一键截图</h3>
-                <p>点击按钮即可保存当前帧</p>
+                <h3 data-i18n="feature1_title">一键截图</h3>
+                <p data-i18n="feature1_desc">点击按钮即可保存当前帧</p>
             </div>
         </div>
         
@@ -136,8 +168,8 @@
                 </svg>
             </div>
             <div class="feature-text">
-                <h3>高清画质</h3>
-                <p>保存原始分辨率图片</p>
+                <h3 data-i18n="feature2_title">高清画质</h3>
+                <p data-i18n="feature2_desc">保存原始分辨率图片</p>
             </div>
         </div>
         
@@ -148,23 +180,23 @@
                 </svg>
             </div>
             <div class="feature-text">
-                <h3>智能识别</h3>
-                <p>自动检测页面中的视频</p>
+                <h3 data-i18n="feature3_title">智能识别</h3>
+                <p data-i18n="feature3_desc">自动检测页面中的视频</p>
             </div>
         </div>
     </div>
     
     <div class="usage">
-        <h2>使用方法</h2>
+        <h2 data-i18n="usage_title">使用方法</h2>
         <ol>
-            <li>打开包含视频的网页：目前支持哔哩哔哩，YouTube，飞牛影视</li>
-            <li>视频播放器右侧会显示"截图"按钮</li>
-            <li>点击按钮即可保存当前画面到下载文件夹</li>
+            <li data-i18n="usage1">打开包含视频的网页：目前支持哔哩哔哩，YouTube，飞牛影视</li>
+            <li data-i18n="usage2">视频播放器右侧会显示"截图"按钮</li>
+            <li data-i18n="usage3">点击按钮即可保存当前画面到下载文件夹</li>
         </ol>
     </div>
     
     <div class="footer">
-        版本 1.0 | 视频截图工具
+        <span data-i18n="version">版本 1.0</span> | <span data-i18n="app_name">视频截图工具</span>
     </div>
     
     <script src="popup.js"></script>

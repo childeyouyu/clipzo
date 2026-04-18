@@ -288,9 +288,38 @@
         });
     }
 
+    function findAndProcessYouTubePlayers() {
+        const players = document.querySelectorAll('.html5-video-player');
+        players.forEach(player => {
+            const existingBtn = player.querySelector(`.${BUTTON_CLASS}`);
+            if (existingBtn) return;
+            
+            const videoElement = player.querySelector('video');
+            if (!videoElement) return;
+            
+            if (PROCESSED_PLAYERS.has(videoElement)) return;
+            PROCESSED_PLAYERS.add(videoElement);
+            
+            const btn = createScreenshotButton();
+            
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (videoElement && videoElement.readyState >= 2) {
+                    captureVideoScreenshot(videoElement);
+                } else {
+                    showToast('视频未准备好');
+                }
+            });
+            
+            player.style.position = 'relative';
+            player.appendChild(btn);
+        });
+    }
+
     function findAndProcessAll() {
         findAndProcessStandardVideos();
         findAndProcessXgPlayers();
+        findAndProcessYouTubePlayers();
     }
 
     function observeNewElements() {

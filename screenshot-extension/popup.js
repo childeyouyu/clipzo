@@ -12,6 +12,7 @@ const translations = {
         usage1: '打开包含视频的网页：目前支持哔哩哔哩，YouTube，飞牛影视',
         usage2: '视频播放器右侧会显示"截图"按钮',
         usage3: '点击按钮即可保存当前画面到下载文件夹',
+        donate_text: '如果你喜欢这个插件，欢迎捐赠。',
         version: '版本 1.0',
         app_name: '视频截图工具'
     },
@@ -28,6 +29,7 @@ const translations = {
         usage1: 'Open a page with video: Supports Bilibili, YouTube, Feiniu',
         usage2: 'The Screenshot button appears on the right side of the video',
         usage3: 'Click the button to save the current frame to download folder',
+        donate_text: 'If you like this extension, please consider donating.',
         version: 'Version 1.0',
         app_name: 'Video Screenshot Tool'
     }

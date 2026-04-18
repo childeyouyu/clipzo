@@ -1,0 +1,58 @@
+{
+    "extension_title": {
+        "message": "📸 视频截图工具",
+        "description": "扩展标题"
+    },
+    "extension_subtitle": {
+        "message": "快速捕获网页视频精彩画面",
+        "description": "扩展副标题"
+    },
+    "feature1_title": {
+        "message": "一键截图",
+        "description": "功能1标题"
+    },
+    "feature1_desc": {
+        "message": "点击按钮即可保存当前帧",
+        "description": "功能1描述"
+    },
+    "feature2_title": {
+        "message": "高清画质",
+        "description": "功能2标题"
+    },
+    "feature2_desc": {
+        "message": "保存原始分辨率图片",
+        "description": "功能2描述"
+    },
+    "feature3_title": {
+        "message": "智能识别",
+        "description": "功能3标题"
+    },
+    "feature3_desc": {
+        "message": "自动检测页面中的视频",
+        "description": "功能3描述"
+    },
+    "usage_title": {
+        "message": "使用方法",
+        "description": "使用说明标题"
+    },
+    "usage1": {
+        "message": "打开包含视频的网页：目前支持哔哩哔哩，YouTube，飞牛影视",
+        "description": "使用说明1"
+    },
+    "usage2": {
+        "message": "视频播放器右侧会显示"截图"按钮",
+        "description": "使用说明2"
+    },
+    "usage3": {
+        "message": "点击按钮即可保存当前画面到下载文件夹",
+        "description": "使用说明3"
+    },
+    "version": {
+        "message": "版本 1.0",
+        "description": "版本文字"
+    },
+    "app_name": {
+        "message": "视频截图工具",
+        "description": "应用名称"
+    }
+}

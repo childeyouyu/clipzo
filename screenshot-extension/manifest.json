@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "视频截图工具",
+  "default_locale": "en",
+  "name": "__MSG_extension_title__",
   "version": "1.0",
-  "description": "在网页视频播放器上显示截图按钮，快速捕获视频画面",
+  "description": "__MSG_extension_subtitle__",
   "permissions": [
     "activeTab",
     "scripting",

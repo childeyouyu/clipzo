@@ -1,0 +1,58 @@
+{
+    "extension_title": {
+        "message": "📸 Video Screenshot Tool",
+        "description": "Extension title"
+    },
+    "extension_subtitle": {
+        "message": "Capture stunning moments from web videos",
+        "description": "Extension subtitle"
+    },
+    "feature1_title": {
+        "message": "One-Click Screenshot",
+        "description": "Feature 1 title"
+    },
+    "feature1_desc": {
+        "message": "Click to save the current frame",
+        "description": "Feature 1 description"
+    },
+    "feature2_title": {
+        "message": "High Quality",
+        "description": "Feature 2 title"
+    },
+    "feature2_desc": {
+        "message": "Saves images in original resolution",
+        "description": "Feature 2 description"
+    },
+    "feature3_title": {
+        "message": "Smart Detection",
+        "description": "Feature 3 title"
+    },
+    "feature3_desc": {
+        "message": "Automatically detects videos on page",
+        "description": "Feature 3 description"
+    },
+    "usage_title": {
+        "message": "How to Use",
+        "description": "Usage section title"
+    },
+    "usage1": {
+        "message": "Open a page with video: Supports Bilibili, YouTube, Feiniu",
+        "description": "Usage instruction 1"
+    },
+    "usage2": {
+        "message": "The Screenshot button appears on the right side of the video",
+        "description": "Usage instruction 2"
+    },
+    "usage3": {
+        "message": "Click the button to save the current frame to download folder",
+        "description": "Usage instruction 3"
+    },
+    "version": {
+        "message": "Version 1.0",
+        "description": "Version text"
+    },
+    "app_name": {
+        "message": "Video Screenshot Tool",
+        "description": "App name"
+    }
+}
